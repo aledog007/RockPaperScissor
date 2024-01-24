@@ -27,23 +27,23 @@ def game():
     pChoice = player()
     cChoice = computer()
 
-    print("The Computer has chosen:", cChoice)
-    print("You have chosen:", pChoice)
+    print("The Computer has chosen: ", cChoice)
+    print("You have chosen: ", pChoice)
 
     if pChoice == cChoice:
-        print("It's a tie! No one gets a point.")
+        print("\nIt's a tie! No one gets a point.")
     elif (
         (pChoice == "r" and cChoice == "s")
         or (pChoice == "s" and cChoice == "p")
         or (pChoice == "p" and cChoice == "r")
     ):
-        print("You won!")
+        print("\nYou won!")
         pPoints += 1
     else:
-        print("Computer has won!")
+        print("\nComputer has won!")
         cPoints += 1
 
-    print("")  # Neue Zeile nach dem Spiel
+    print("")
 
 
 print("Welcome to the funny Rock Paper and Scissors game! 😎")
@@ -55,9 +55,7 @@ while True:
     print()
 
     again = int(
-        input(
-            "Press 1 to continue\nPress 2 to reset and continue\nPress 3 to exitaass\ns"
-        )
+        input("Press 1 to continue\nPress 2 to reset and continue\nPress 3 to exit\n")
     )
 
     if again == 1:
